@@ -1,0 +1,32 @@
+{
+  "name": "innovit-ecommerce",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "esbuild-loader": "^4.0.2"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.14.5",
+    "@strapi/plugin-users-permissions": "4.14.5",
+    "@strapi/strapi": "4.14.5",
+    "pg": "8.8.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "1a23368c-3d6a-4087-a753-1165af60d250"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
