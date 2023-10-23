@@ -11,7 +11,7 @@ services:
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
       DATABASE_HOST: strapiDB
-      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_PORT: strapiDB
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
@@ -32,6 +32,7 @@ services:
       - innovit_academy
     depends_on:
       - strapiDB
+    command: tail -f /dev/null
 
   strapiDB:
     build:
