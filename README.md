@@ -39,6 +39,5 @@ docker exec -it strapiDB bash
 
 psql
 
-CREATE DATABASE innovit-ecommerce;
-
+CREATE DATABASE innovit-ecommerce OWNER postgres;
 ```
