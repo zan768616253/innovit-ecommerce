@@ -1,8 +1,5 @@
 FROM ubuntu:20.04
 
-ARG USER_ID=501
-ARG GROUP_ID=1000
-
 RUN apt-get update && apt-get install -y software-properties-common
 RUN apt-get update && apt-get install -y \
     g++-mingw-w64-x86-64 \
