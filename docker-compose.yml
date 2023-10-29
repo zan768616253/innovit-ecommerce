@@ -32,7 +32,6 @@ services:
       - innovit_academy
     depends_on:
       - strapiDB
-    command: tail -f /dev/null
 
   strapiDB:
     build:

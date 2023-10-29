@@ -26,7 +26,7 @@ USER postgres
 
 # Create Demo Database
 COPY docker/scripts/database /var/lib/postgresql/scripts
-# RUN /var/lib/postgresql/scripts/createTestDB.sh
+RUN /var/lib/postgresql/scripts/createDB.sh
 
 WORKDIR $HOME
 

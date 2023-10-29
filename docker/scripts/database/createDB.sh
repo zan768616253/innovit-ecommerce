@@ -25,18 +25,21 @@ waitfor() {
   fi
 }
 
-createTestDB(){
+createDB(){
   PG_VERSION=$1
   WAIT_PORT=$2
   pg_ctlcluster $PG_VERSION $PG_CLUSTER start
   waitfor $RETRIES
 
-  psql -p $WAIT_PORT -w -f /var/lib/postgresql/scripts/createTestDB.sql
+  psql -p $WAIT_PORT -w -f /var/lib/postgresql/scripts/createDB.sql
+#   psql -p $WAIT_PORT <<EOF
+#       CREATE DATABASE "innovit-ecommerce";
+# EOF
 
+  sleep 5
   pg_ctlcluster $PG_VERSION $PG_CLUSTER stop
 }
-
 values=(`pg_lsclusters -h|awk -v ver=1 -v port=3 '{print $ver, $port}'`)
 for i in 0; do
-  createTestDB ${values[i]} ${values[i+1]}
+  createDB ${values[i]} ${values[i+1]}
 done
