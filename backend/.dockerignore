@@ -1,0 +1,17 @@
+**/node_modules/
+**/dist
+
+
+
+
+.aws
+.git
+.coverage
+.coverage.*
+.cache
+.idea
+.vscode
+
+.strapi-updater.json
+
+npm-debug.log
