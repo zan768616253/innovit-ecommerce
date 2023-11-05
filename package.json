@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "frontend": "yarn dev --prefix ../frontend/"
   },
   "dependencies": {
     "concurrently": "^8.2.2",
