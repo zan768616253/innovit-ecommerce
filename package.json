@@ -3,9 +3,8 @@
     "clear-frontend": "cd frontend && rm -rf .next && rm -rf cache",
     "clear-backend": "cd backend && docker-compose down",    
     "start-db": "cd backend && docker-compose up strapiDB -d",
-    "frontend": "yarn dev --prefix ../frontend/",
-    "backend": "yarn develop --prefix ../backend/",
-    "dev": "yarn clear-frontend && yarn clear-backend && yarn start-db && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\""
+    "clear": "concurrently \"yarn clear-frontend\" \"yarn clear-backend\"",
+    "dev": "yarn clear-frontend && yarn clear-backend && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\""
   },
   "dependencies": {
     "concurrently": "^8.2.2",
