@@ -1,4 +1,4 @@
-# 🚀 Getting started with Strapi
+# 🚀 Getting started with Innovit ecommerce
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
@@ -40,4 +40,45 @@ docker exec -it strapiDB bash
 psql
 
 CREATE DATABASE innovit-ecommerce OWNER postgres;
+```
+
+### `graphql query`
+
+```
+http://localhost:1337/graphql
+
+query {
+  messages {
+    data {
+      id
+      attributes {
+        greetings
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}
+
+query {
+  messages {
+    data {
+      id
+      attributes {
+        greetings
+      }
+    }
+  }
+}
+
+query {
+  message(id: "1") {
+    data {
+      id
+      attributes {
+        greetings
+      }
+    }
+  }
+}
 ```
