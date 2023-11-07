@@ -1,6 +1,30 @@
 import Image from 'next/image'
 
-export default function Home() {
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+
+export default async function Home() {
+  // const client = new ApolloClient({
+  //   uri: "http://localhost:1337/graphql",
+  //   cache: new InMemoryCache()
+  // })
+  // const { data } = await client.query({
+  //   query: gql`
+  //   query getGreetings {
+  //     messages {
+  //       data {          
+  //         attributes {
+  //           greetings
+  //           createdAt
+  //           updatedAt
+  //         }
+  //       }
+  //     }
+  //   }
+  //   `
+  // });
+
+  // console.log(data.messages.data[0])
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">

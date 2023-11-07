@@ -5,6 +5,7 @@
     "start-db": "cd backend && docker-compose up strapiDB -d",
     "clear": "concurrently \"yarn clear-frontend\" \"yarn clear-backend\"",
     "dev": "yarn clear-frontend && yarn clear-backend && concurrently \"cd frontend && yarn dev\" \"cd backend && yarn develop\""
+    
   },
   "dependencies": {
     "concurrently": "^8.2.2",
